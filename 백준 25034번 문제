@@ -1,0 +1,13 @@
+int main() {
+	int a, b, c, d, sum = 0;
+	scanf("%d %d", &a, &b);
+	for (int i = 1; i <= b; i++) {
+		scanf("%d %d", &c, &d);
+		sum += c * d;
+	}
+	if (a == sum)
+		printf("Yes");
+	else
+		printf("No");
+	return 0;
+}
