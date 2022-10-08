@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main() {
+	int n, p, arr[1000], sum, cnt;
+	double avg;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		sum = 0;
+		cnt = 0;
+		avg = 0.00;
+		scanf("%d", &p);
+		for (int j = 0; j < p; j++)
+		{
+			scanf("%d", &arr[j]);
+			sum += arr[j];
+		}
+		avg = (double)sum / p;
+		for (int j = 0; j < p; j++) {
+			if (arr[j] > avg) {
+				cnt++;
+			}
+		}
+		printf("%.3lf%%\n", (double)cnt*100/p);
+	}
+	return 0;
+}
